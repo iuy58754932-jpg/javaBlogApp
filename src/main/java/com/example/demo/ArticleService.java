@@ -23,7 +23,7 @@ public class ArticleService {
 
     //1件取得
     public Article findById(Long id) {
-        return articleRepository.findById(id).orElseThrow(() -> new RuntimeException("記事が見つかりません: id =" + id));
+        return articleRepository.findById(id).orElseThrow(() -> new ArticleNotFoundException("記事が見つかりません: id =" + id));
     }
 
     //更新
