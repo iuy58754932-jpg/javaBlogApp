@@ -20,4 +20,22 @@ public class ArticleService {
     public Article create(Article article) {
         return articleRepository.save(article);
     }
+
+    //1件取得
+    public Article findById(Long id) {
+        return articleRepository.findById(id).orElseThrow(() -> new RuntimeException("記事が見つかりません: id =" + id));
+    }
+
+    //更新
+    public Article update(Long id, Article article) {
+        Article existing = findById(id);
+        existing.setTitle(article.getTitle());
+        existing.setContent(article.getContent());
+        return articleRepository.save(existing);
+    }
+
+    //削除
+    public void delete(Long id) {
+        articleRepository.deleteById(id);
+    }
 }
