@@ -1,0 +1,10 @@
+POST http://localhost:8080/articles
+Content-Type: application/json
+
+{
+    "title": "はじめての記事",
+    "content": "これは本文です。"
+}
+
+### 一覧を取得 (GET)
+GET http://localhost:8080/articles

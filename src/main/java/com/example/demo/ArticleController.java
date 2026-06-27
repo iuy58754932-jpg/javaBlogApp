@@ -23,6 +23,7 @@ public class ArticleController {
     }
 
     //登録 : POST /articles
+    @PostMapping
     public Article createArticle(@RequestBody Article article) {
         return articleService.create(article);
     }
