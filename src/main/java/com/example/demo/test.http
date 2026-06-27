@@ -8,3 +8,18 @@ Content-Type: application/json
 
 ### 一覧を取得 (GET)
 GET http://localhost:8080/articles
+
+### 1件取得(GET)
+GET http://localhost:8080/articles/1
+
+### 更新(PUT)
+PUT http://localhost:8080/articles/1
+Content-Type: application/json
+
+{
+    "title": "更新後のタイトル",
+    "content": "本文を書き替えました。"
+}
+
+### 削除(DELETE)
+DELETE http://localhost:8080/articles/1
