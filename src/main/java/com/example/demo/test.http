@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "title": "はじめての記事",
-    "content": "これは本文です。"
+    "content": "これは本文です。test"
 }
 
 ### 一覧を取得 (GET)
