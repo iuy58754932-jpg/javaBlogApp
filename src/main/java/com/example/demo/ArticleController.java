@@ -19,6 +19,12 @@ public class ArticleController {
         this.articleService = articleService;
     }
 
+    //Get　→ findAll
+    //登録　→ create
+    //1件取得　→ findById
+    //更新　→ update
+    //削除　→ delete
+
     //一覧取得 : GET /articles
     @GetMapping
     public List<Article> getArticles() {
